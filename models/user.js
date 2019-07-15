@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     firstname:{
       type:DataTypes.STRING,
-        allowNull:false
+      allowNull:false
     },
     lastname:{
       type:DataTypes.STRING,
@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
     
   });
   User.prototype.validPassword=function(password){
-  return bycrypt.compareSync(password,this.password); 
+    return bycrypt.compareSync(password,this.password); 
   };
   User.addHook("beforeCreate",function(user){
     user.password=bycrypt.hashSync(user.password,bycrypt.genSaltSync(10),null);
