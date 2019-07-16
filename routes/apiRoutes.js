@@ -36,28 +36,6 @@ module.exports = function (app) {
   });
 
   // post for checking the user 
-<<<<<<< HEAD
-  app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    console.log(res.statusCode);
-    if (res.statusCode === 200) {
-      res.send({
-        message: true
-      });
-    } else {
-      res.send({
-        message: false
-      });
-    }
-
-
-  });
-  //calling the display
-
-  app.post("/api/welcome", function (req, res) {
-
-
-  });
-=======
   app.post("/api/login",passport.authenticate("local"), function (req, res) {
     console.log(res.statusCode);
     if(res.statusCode===200)
@@ -76,7 +54,6 @@ module.exports = function (app) {
 
   
   // });
->>>>>>> master
 
 
   //end of module.exports
