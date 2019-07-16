@@ -1,7 +1,6 @@
 var db = require("../models");
 // =============================================================
 var path = require("path");
-var passport=require("../config/passport");
 
 //loads the login page
 module.exports = function(app) {

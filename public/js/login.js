@@ -48,7 +48,7 @@ $(document).ready(function () {
           type:"GET",
           data:data
         }).then (function(data){
-          console.log("sucessfully landed on welcome page");
+          console.log("sucessfully landed on welcome page " + data);
         });
       }
     });
