@@ -7,11 +7,7 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-<<<<<<< HEAD
-    "test": "npm run lint && cross-env NODE_ENV=test mocha  --reporter spec --exit"
-=======
     "test": "npm run lint && cross-env NODE_ENV=test mocha --reporter spec --exit"
->>>>>>> master
   },
   "license": "ISC",
   "dependencies": {
@@ -21,11 +17,8 @@
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
     "mysql2": "^1.6.5",
-<<<<<<< HEAD
-=======
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
->>>>>>> master
     "sequelize": "^5.10.1"
   },
   "devDependencies": {
