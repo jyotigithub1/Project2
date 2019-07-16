@@ -42,7 +42,8 @@ $(document).ready(function () {
         p.css("color", "red");
         $("#error").append(p);
         console.log("no match");
-      } else{
+      }
+      else{
         $.ajax("/api/welcome",{
           type:"GET",
           data:data
@@ -53,5 +54,11 @@ $(document).ready(function () {
     });
 
   });
-//End of document.ready function()     
+
+
+
+
+
+
+  //End of document.ready function()     
 });

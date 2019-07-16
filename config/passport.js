@@ -23,7 +23,8 @@ passport.use(
       }
       return done(null, dbUser);
     });
-  })
+  }
+  )
 );
 passport.serializeUser(function (user, cb) {
   cb(null, user);

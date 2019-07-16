@@ -50,10 +50,10 @@ module.exports = function (app) {
   });
   //calling the display
 
-  app.post("/api/welcome", function (req, res) {
+  // app.post("/api/welcome", function (req, res) {
 
   
-  });
+  // });
 
 
 //end of module.exports
