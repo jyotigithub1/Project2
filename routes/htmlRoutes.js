@@ -1,22 +1,21 @@
 var db = require("../models");
 // =============================================================
 var path = require("path");
-var passport=require("../config/passport");
 
 //loads the login page
 module.exports = function(app) {
  
   app.get("/",function(req,res){
     res.sendFile(path.join(__dirname, "../public/login.html"));
-   });
+  });
 
   app.get("/login",function(req,res){
-  res.sendFile(path.join(__dirname, "../public/login.html"));
- });
-//loads the register page
- app.get("/register",function(req,res){
-  res.sendFile(path.join(__dirname, "../public/register.html"));
- });
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  //loads the register page
+  app.get("/register",function(req,res){
+    res.sendFile(path.join(__dirname, "../public/register.html"));
+  });
  
  
   // Load index page
