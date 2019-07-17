@@ -1,14 +1,7 @@
-var bycrypt=require("bcryptjs");
+
+var bcrypt = require("bcryptjs");
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    firstname:{
-      type:DataTypes.STRING,
-      allowNull:false
-    },
-    lastname:{
-      type:DataTypes.STRING,
-      allowNull:false
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,22 +13,19 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    cnfpassword: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    role: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    
+    }
   });
-  User.prototype.validPassword=function(password){
-    return bycrypt.compareSync(password,this.password); 
+
+  User.associate = function(models){
+    User.hasMany(models.Note, { onDelete: "cascade"});
   };
-  User.addHook("beforeCreate",function(user){
-    user.password=bycrypt.hashSync(user.password,bycrypt.genSaltSync(10),null);
+
+  User.prototype.validPassword = function(password){
+    return bcrypt.compareSync(password, this.password);
+  };
+
+  User.addHook("beforeCreate", function(user){
+    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
   return User;
 };
