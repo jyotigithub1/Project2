@@ -1,3 +1,42 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.loginForm {
+  margin-left:14%;
+  margin-bottom: 12%;
+  border-color: red;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  height: 300px;
+}
+.welcomeTitle {
+  text-align: center;
+  /* color: rgb(0, 0, 0); */
+}
+#welcomePage{
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background-position: bottom left;
+}
+.new-user-link{
+  margin-left: 50px;
+}
+.navbar {
+  margin-bottom: 9%;
+  background-color: rgba(196, 196, 196, 0.911) !important;
+}
+#user-display-page {
+  background-color: rgb(231, 224, 213);
+}
+.logoutStyle {
+  margin-left: 70%;
+}
+.user-search-box {
+  text-align: center;
+  float: center;
+  margin-bottom: 40%;
+}
+#book-search {
+  margin-top: 40px;
+}
