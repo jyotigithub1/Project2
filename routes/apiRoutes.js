@@ -1,5 +1,6 @@
 var db = require("../models");
 var passport=require("../config/passport");
+// var isAuthenticated=require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
   // Get all examples
   app.get("/api/examples", function (req, res) {
@@ -56,5 +57,5 @@ module.exports = function (app) {
   // });
 
 
-//end of module.exports
+  //end of module.exports
 };

@@ -1,6 +1,151 @@
 .list-group-item {
   line-height: 2.5;
 }
+html, body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+  background-color: #f4f4f4;
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background-position: bottom left;
+  
+}
+
+body {
+	overflow-x: hidden;
+}
+
+h3 {
+	font-size: 27px;
+}
+
+p {
+	margin: 16px 0;
+    font-size: 13px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.main-container {
+	width: 100%;
+}
+
+.menu {
+	position: fixed;
+	width: 200px;
+	background-color: #241c1c;
+	height: 100vh;
+	color: white;
+}
+
+.toggle {
+	display: none;
+}
+
+.title {
+	margin: 35px 0 39px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.tabs {
+    width: 200px;
+	height: 75vh;
+	margin-top: 85px;
+	position: fixed;
+	overflow-y: auto;
+	z-index: 10;
+}
+
+.tabs::-webkit-scrollbar {
+	width: 6px;
+}
+ 
+.tabs::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius:20px;
+}
+
+.tabs::-webkit-scrollbar-track {
+	background-color:#484848;
+	border-radius: 20px;
+}
+
+.books-content {
+	width: calc(100% - 200px);
+	float: right;
+	margin-top: 25px;
+}
+.input-bar:focus, .input-bar:active {
+	outline: none;
+}
+
+.submit {
+	display: none;
+}
+
+.books-area {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 23px 50px 35px;
+}
+
+.search-bar {
+	margin: 0 60px;
+}
+
+.search-container {
+	width: 570px;
+    padding: 10px 25px;
+    border-radius: 23px;
+    background-color: #e5e5e5;
+}
+
+.search-container i {
+	color: #888888;
+    font-size: 12px;
+    margin-right: 11px;
+}
+
+.input-bar {
+    background-color: #e5e5e5;
+    border: 0;
+    font-weight: 600;
+    height: 24px;
+    letter-spacing: 0.2px;
+	width: 95%;
+	color: #191919;
+	font-size: 14px;
+}
+
+.input-bar:focus, .input-bar:active {
+	outline: none;
+}
+
+.active {
+	color: white;
+}
+
+.selector {
+    top: 0px;
+    left: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid white;
+	position: absolute;
+}
+
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 50px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 
 .loginForm {
   margin-left:14%;
@@ -15,9 +160,12 @@
   text-align: center;
   /* color: rgb(0, 0, 0); */
 }
-#welcomePage{
+/* #welcomePage{
   background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
   background-position: bottom left;
+} */
+.headertext{
+  color:rgb(182, 178, 178);
 }
 .new-user-link{
   margin-left: 50px;
