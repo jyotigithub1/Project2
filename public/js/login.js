@@ -16,7 +16,7 @@ $(document).ready(function () {
     $.ajax("/api/register", {
       type: "POST",
       data: postregister
-    }).then(function (data) {
+    }).then(function () {
       console.log("Added new Record");
       alert("data added");
       // Reload the page to get the updated list
@@ -48,7 +48,7 @@ $(document).ready(function () {
         $.ajax("/api/welcome", {
           type: "GET",
           data: data
-        }).then(function (data) {
+        }).then(function () {
           console.log("sucessfully landed on welcome page");
         });
       }
