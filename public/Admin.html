@@ -35,7 +35,7 @@
       
 
 
-       <!--getbookss-->
+       <!--getbooks-->
 
        <div class="main-container">
 
@@ -52,7 +52,13 @@
                <h3 class="title"><a href="index.html">Admin</a></h3>
                 <ul>
                     <li>
-                     Dashbord
+                            <p id="demo" onclick="myFunction()">Dashboard</p>
+
+                            <script>
+                            function myFunction() {
+                              document.getElementById("demo").innerHTML = "Welcome to our Dashboard !!";
+                            }
+                            </script>
                     </li>
                 </ul>
                 <ul>
@@ -60,11 +66,7 @@
                         Posts
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        Categories
-                    </li>
-                </ul>
+                
                 <ul>
                     <li>
                         Comments
