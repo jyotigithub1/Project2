@@ -171,13 +171,17 @@ h2 {
   margin-left: 50px;
 }
 .navbar {
-  margin-bottom: 9%;
-  background-color: rgba(196, 196, 196, 0.911) !important;
+  margin-bottom: 0%;
 }
 #user-display-page {
-  background-color: rgb(231, 224, 213);
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background-position: bottom left;
 }
 .logoutStyle {
+  margin-left: 2%;
+  font-weight: 24px;
+}
+.profile-style {
   margin-left: 70%;
 }
 .user-search-box {
@@ -189,3 +193,23 @@ h2 {
   margin-top: 40px;
 }
 
+.form-inline {
+  margin-left: 29%;
+  padding-bottom: 3%;
+  margin-top: 4%;
+  color: white;
+}
+ 
+.title {
+  margin-top: 40%;
+  margin-left: 30%;
+  color: white;
+}
+
+.category {
+  margin-left: 36%;
+}
+
+#book-search-btn {
+  margin-top: 10%;
+}
