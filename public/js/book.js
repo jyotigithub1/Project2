@@ -1,4 +1,3 @@
-// require("dotenv").config();
 $(document).ready(function () {
 
   $(document).on("click", "#addCategory", function (event) {

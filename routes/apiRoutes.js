@@ -1,6 +1,8 @@
 var db = require("../models");
 var passport=require("../config/passport");
-// var isAuthenticated=require("../config/middleware/isAuthenticated");
+var path = require("path");
+// var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function (app) {
   // Get all examples
   app.get("/api/examples", function (req, res) {
@@ -33,28 +35,18 @@ module.exports = function (app) {
         id: dbUser.Id
       });
       console.log("Added");
+      res.sendFile(path.join(__dirname, "../public/display.html"));
     });
   });
 
   // post for checking the user 
-  app.post("/api/login",passport.authenticate("local"), function (req, res) {
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {
     console.log(res.statusCode);
-    if(res.statusCode===200)
-    {
-      res.send({message:true});
-    }
-    else{
-      res.send({message:false});
-    }
-      
-      
+    res.status(200).send();
   });
-  //calling the display
+  // calling the display
 
-  // app.post("/api/welcome", function (req, res) {
-
-  
-  // });
+ 
 
 
   //end of module.exports
