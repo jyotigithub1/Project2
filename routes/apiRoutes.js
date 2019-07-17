@@ -1,5 +1,6 @@
 var db = require("../models");
-var passport = require("../config/passport");
+var passport=require("../config/passport");
+// var isAuthenticated=require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
   // Get all examples
   app.get("/api/examples", function (req, res) {
