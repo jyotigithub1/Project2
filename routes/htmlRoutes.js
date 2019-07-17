@@ -1,7 +1,6 @@
 var db = require("../models");
 // =============================================================
 var path = require("path");
-var passport=require("../config/passport");
 
 //loads the login page
 module.exports = function(app) {
@@ -17,12 +16,7 @@ module.exports = function(app) {
   app.get("/register",function(req,res){
     res.sendFile(path.join(__dirname, "../public/register.html"));
   });
-  app.get("/adminaddPage",function(req,res){
-    res.sendFile(path.join(__dirname, "../public/adminaddPage.html"));
-  });
-
-
-
+ 
  
   // Load index page
   app.get("/", function(req, res) {
