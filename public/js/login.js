@@ -10,7 +10,8 @@ $(document).ready(function () {
       lastname: $("#cmsInputLastName").val().trim(),
       email: $("#cmsInputEmail1").val().trim(),
       password: $("#cmsInputPassword1").val().trim(),
-      cnfpassword: $("#cmsConfirmPassword").val().trim()
+      cnfpassword: $("#cmsConfirmPassword").val().trim(),
+      role:$("#role").val().trim()
     };
     console.log(postregister);
     $.ajax("/api/register", {
@@ -36,8 +37,13 @@ $(document).ready(function () {
     $.ajax("/api/login", {
       type: "POST",
       data: login
-    }).then(function (data) {
-      if (data.message === false) {
+    }).then(function (data, successful, xhr) {
+      console.log(arguments);
+      // redirect the user
+      // window.location.href = "/whatever/url";
+      console.log(data);
+      console.log(xhr.status);
+      if (xhr.status !== 200) {
         var p = $("<p>");
         p.addClass("errortag");
         p.text("User details does not match");
@@ -45,12 +51,9 @@ $(document).ready(function () {
         $("#error").append(p);
         console.log("no match");
       } else {
-        $.ajax("/api/welcome", {
-          type: "GET",
-          data: data
-        }).then(function () {
-          console.log("sucessfully landed on welcome page");
-        });
+        console.log("test");
+        window.location.href = "/welcome";
+       
       }
     });
 

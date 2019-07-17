@@ -29,12 +29,14 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      // res.render("example", {
-      //   example: dbExample
-      // });
-    });
+  // app.get("/example/:id", function(req, res) {
+  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample){
+  //   });
+  // });
+
+  app.get("/welcome", function (req, res) {
+    console.log("here's some stuff about the user:", req.user.firstname + " " + req.user.lastname+ " Role"+req.user.role);
+    res.sendFile(path.join(__dirname, "../public/display.html"));
   });
 
   // Render 404 page for any unmatched routes
