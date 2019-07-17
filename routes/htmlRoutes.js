@@ -8,16 +8,21 @@ module.exports = function(app) {
  
   app.get("/",function(req,res){
     res.sendFile(path.join(__dirname, "../public/login.html"));
-   });
+  });
 
   app.get("/login",function(req,res){
-  res.sendFile(path.join(__dirname, "../public/login.html"));
- });
-//loads the register page
- app.get("/register",function(req,res){
-  res.sendFile(path.join(__dirname, "../public/register.html"));
- });
- 
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  //loads the register page
+  app.get("/register",function(req,res){
+    res.sendFile(path.join(__dirname, "../public/register.html"));
+  });
+  app.get("/adminaddPage",function(req,res){
+    res.sendFile(path.join(__dirname, "../public/adminaddPage.html"));
+  });
+
+
+
  
   // Load index page
   app.get("/", function(req, res) {
