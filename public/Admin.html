@@ -1,109 +1,94 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 
-   <html>
+<html>
+  <head>
+    <!-- Metadata -->
 
-   <head>
+    <meta charset="UTF-8" />
 
-       <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetBooks</title>
 
-       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Fonts-->
 
-       <title>GetBooks</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
-       <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+      rel="stylesheet"
+    />
 
-       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--jQuery-->
 
-       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-       <!--jQuery-->
+    <!--CSS-->
 
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  </head>
 
-       <!--CSS-->
+  <body>
+    <!--getbooks-->
 
-       <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="tabs"></div>
+      </div>
 
-   </head>
+      <div class="menu">
+        <h3 class="title"><a href="index.html">Admin</a></h3>
+        <ul>
+          <li>
+            <p id="demo" onclick="myFunction()">Dashboard</p>
 
-   <body>
-      
+            <script>
+              function myFunction() {
+                document.getElementById("demo").innerHTML =
+                  "Welcome to our Dashboard !!";
+              }
+            </script>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Posts
+          </li>
+        </ul>
 
+        <ul>
+          <li>
+            Comments
+          </li>
+        </ul>
+      </div>
 
-       <!--getbooks-->
+      <div class="books-content">
+        <h2>Dashboard</h2>
+        <form class="search-bar">
+          <div class="search-container">
+            <i class="fas fa-search"></i>
 
-       <div class="main-container">
+            <input type="text" class="input-bar" placeholder="Search..." />
 
-           <div class="sidebar">
+            <input type="submit" class="submit" />
+          </div>
+        </form>
 
-               <div class="tabs">
+        <div class="books-area">
+          <div class="error-message"></div>
+        </div>
+      </div>
+    </div>
 
-               </div>
-
-           </div>
-
-           <div class="menu">
-
-               <h3 class="title"><a href="index.html">Admin</a></h3>
-                <ul>
-                    <li>
-                            <p id="demo" onclick="myFunction()">Dashboard</p>
-
-                            <script>
-                            function myFunction() {
-                              document.getElementById("demo").innerHTML = "Welcome to our Dashboard !!";
-                            }
-                            </script>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        Posts
-                    </li>
-                </ul>
-                
-                <ul>
-                    <li>
-                        Comments
-                    </li>
-                </ul>
-           </div>
-
-           <div class="books-content">
-                  <h2>Dashboard</h2>
-               <form class="search-bar">
-
-                   <div class="search-container">
-
-                       <i class="fas fa-search"></i>
-
-                       <input type="text" class="input-bar" placeholder="Search...">
-
-                       <input type="submit" class="submit">
-
-                   </div>
-                  
-
-               </form>
-
-               <div class="books-area">
-
-                   <div class="error-message"></div>
-
-               </div>
-
-           </div>
-
-       </div>
-
-
-       <!--Javascript-->
-       <script type="text/javascript" src="public/js/admin.js"></script>
-   </body>
-
-   </html>
+    <!--Javascript-->
+    <script type="text/javascript" src="public/js/admin.js"></script>
+  </body>
+</html>
