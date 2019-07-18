@@ -19,32 +19,53 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
 </head>
 
+<style>
+  .h1{
+  color: aliceblue;
+  margin-left:10%;
+}
+</style>
 <body>
     <!--getbooks-->
-
+    <div class="h1">
+     <h1>Welcome Admin !!</h1>
+     <p>Now select what do you wanna look for!!</p>
+    </div>
     <div class="main-container">
         <div class="sidebar">
             <div class="tabs"></div>
         </div>
 
         <div class="menu" style="position: sticky !important">
+          <ul>
+            <li>
                 <a class="d-block small mt-3" href="index.html">Admin</a>
+              </li>
+              </ul>
+              <ul>
+                <li>
                 <a class="d-block small" href="/addbooks">Books</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
                 <a class="d-block small" href="/addbooks">Comments</a>
-            <h3 class="title"><a href="index.html">Admin</a></h3>
-            
+                </li>
+                </ul>
+                <ul>
+                <li>
+                 <a class="d-block small" href="/api/logout">Logout</a>
+                 </li>
+                 </ul>
+                       
         </div>
 
         <div class="books-content">
-            <h2>Dashboard</h2>
-           
-
+    
             <div class="books-area">
                 <div class="error-message"></div>
             </div>
         </div>
     </div>
-
   </body>
-
 </html>
