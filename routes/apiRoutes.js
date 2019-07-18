@@ -1,6 +1,5 @@
 var db = require("../models");
 var passport=require("../config/passport");
-var path = require("path");
 require("dotenv").config();
 // var isAuthenticated = require("../config/middleware/isAuthenticated");
 var apikey =process.env.API_KEY;
@@ -12,7 +11,6 @@ module.exports = function (app) {
       res.json(dbExamples);
     });
   });
-
   // Create a new example
   app.post("/api/examples", function (req, res) {
     db.Example.create(req.body).then(function (dbExample) {
@@ -56,14 +54,14 @@ module.exports = function (app) {
   //Adding a new book
   app.post("/api/addbook",function(req,res){
     // console.log("req data::::::::::::"+ req.body);
-   try{
-    db.Book.create(req.body).then (function(dbBook){
-      res.send({message:true});
-      console.log("Added");
-    });
-   }catch(err){
-     console.log(err);
-   }
+    try{
+      db.Book.create(req.body).then (function(dbBook){
+        res.send({message:true});
+        console.log("Added");
+      });
+    }catch(err){
+      console.log(err);
+    }
   });
   //  serach by category
   app.post("/api/searchbycategory",function(req,res){
@@ -77,7 +75,7 @@ module.exports = function (app) {
     }catch(err){
       console.log(err);
     }
- });
+  });
   
   //end of module.exports
 };
