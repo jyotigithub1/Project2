@@ -20,7 +20,7 @@ h3 {
 
 p {
 	margin: 16px 0;
-    font-size: 13px;
+  font-size: 13px;
 }
 
 a {
@@ -45,7 +45,7 @@ a {
 }
 
 .tabs {
-    width: 200px;
+  width: 200px;
 	height: 75vh;
 	margin-top: 85px;
 	position: fixed;
@@ -92,23 +92,23 @@ a {
 
 .search-container {
 	width: 570px;
-    padding: 10px 25px;
-    border-radius: 23px;
-    background-color: #e5e5e5;
+  padding: 10px 25px;
+  border-radius: 23px;
+  background-color: #e5e5e5;
 }
 
 .search-container i {
 	color: #888888;
-    font-size: 12px;
-    margin-right: 11px;
+  font-size: 12px;
+  margin-right: 11px;
 }
 
 .input-bar {
-    background-color: #e5e5e5;
-    border: 0;
-    font-weight: 600;
-    height: 24px;
-    letter-spacing: 0.2px;
+  background-color: #e5e5e5;
+  border: 0;
+  font-weight: 600;
+  height: 24px;
+  letter-spacing: 0.2px;
 	width: 95%;
 	color: #191919;
 	font-size: 14px;
@@ -123,11 +123,11 @@ a {
 }
 
 .selector {
-    top: 0px;
-    left: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 11px solid white;
+  top: 0px;
+  left: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid white;
 	position: absolute;
 }
 
@@ -180,7 +180,7 @@ h2 {
 .user-search-box {
   text-align: center;
   float: center;
-  margin-bottom: 40%;
+  margin-bottom: 5%;
 }
 #book-search {
   margin-top: 40px;
@@ -196,18 +196,55 @@ h2 {
 }
  
 .title {
-  margin-top:-130px;
   color: white;
   /* text-align: center; */
   font-weight: 700;  
 }
 
 .category {
-  margin-left: 36%;
+  margin-left: 42%;
 }
 
 #book-search-btn {
   margin-top: 10%;
+}
+
+.info-row {
+  background: white;
+  margin-right: 35px;
+}
+
+#books-area {
+  /* overflow:scroll; */
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.search-container-2 {
+	margin-left: auto;
+  padding: 10px 25px;
+  border-radius: 23px;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+.display-container {
+  height: 100%;
+  width: 100%;
+}
+
+.book-div{
+  width: 50%;
+  height: 30%;
+  float: left;
+  margin-bottom: 70px;
+
+}
+
+.text {
+  float: right;
 }
 .mr-2 {
   margin-left:-200px;
