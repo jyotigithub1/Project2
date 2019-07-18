@@ -33,7 +33,7 @@ a {
 }
 
 .menu {
-	position: fixed;
+	float: left;
 	width: 200px;	
 	height: 100vh;
   color: white;
@@ -187,7 +187,9 @@ h2 {
 }
 
 .form-inline {
-  margin-left: 29%;
+  margin-top: 7% !important;
+  float: left;
+  margin-left: 25%;
   padding-bottom: 3%;
   margin-top: 4%;
   color: white;
