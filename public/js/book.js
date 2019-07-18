@@ -41,7 +41,44 @@ $(document).ready(function () {
       url: queryURL,
       method: "GET"
     }).then(function (response) {
+      var response = response.items;
       console.log(response);
+      
+      //opening of main for loop
+      for (var i = 0; i < response.length; i++) {
+        console.log(response[i]);
+
+        //display books and images
+        var bookDiv = $("<div>");
+        bookDiv.addClass("book-div")
+        var bookRow = $("<div>");
+        bookRow.addClass("info-row");
+        var bookTitle = response[i].volumeInfo.title;
+        var author = response[i].volumeInfo.authors[0];
+        var publishedDate = response[i].volumeInfo.publishedDate;
+        var bookImage = response[i].volumeInfo.imageLinks.smallThumbnail;
+        console.log(bookTitle, author, publishedDate);
+        console.log(bookImage)
+
+        var p = $("<p>");
+        var titleDiv = $("<div>")
+        var infoDiv = $("<div>")
+        titleDiv.addClass("book-title")
+        titleDiv.html(bookTitle + "<br>")
+        infoDiv.addClass("info-text")
+        infoDiv.html(author + "<br>" + publishedDate + "<br>")
+        var imageDiv = $("<img>");
+        imageDiv.attr("src", bookImage);
+        imageDiv.addClass("images col-6")
+        bookRow.append(imageDiv);
+
+        p.prepend(titleDiv);
+        p.append(infoDiv);
+        p.addClass("text col-6")
+        bookRow.append(p);
+        bookDiv.append(bookRow);
+        $("#books-area").append(bookDiv);
+      }  //closing of main for loop
     });
   }
 });
