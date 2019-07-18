@@ -34,20 +34,14 @@ a {
 
 .menu {
 	position: fixed;
-	width: 200px;
-	background-color: #241c1c;
+	width: 200px;	
 	height: 100vh;
-	color: white;
+  color: white;
+  margin-top: 90px;
 }
 
 .toggle {
 	display: none;
-}
-
-.title {
-	margin: 35px 0 39px;
-	font-weight: 700;
-	text-align: center;
 }
 
 .tabs {
@@ -146,6 +140,8 @@ h2 {
   margin-inline-start: 50px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
 
 .loginForm {
   margin-left:14%;
@@ -158,12 +154,9 @@ h2 {
 }
 .welcomeTitle {
   text-align: center;
-  /* color: rgb(0, 0, 0); */
+ 
 }
-/* #welcomePage{
-  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
-  background-position: bottom left;
-} */
+
 .headertext{
   color:rgb(182, 178, 178);
 }
@@ -201,9 +194,10 @@ h2 {
 }
  
 .title {
-  margin-top: 40%;
-  margin-left: 30%;
+  margin-top:-130px;
   color: white;
+  /* text-align: center; */
+  font-weight: 700;  
 }
 
 .category {
@@ -212,4 +206,30 @@ h2 {
 
 #book-search-btn {
   margin-top: 10%;
+}
+.mr-2 {
+  margin-left:-200px;
+  color: white;
+  text-align: center;
+}
+.mx-2 {
+  margin-left:-200px;
+  margin-top: -100px;
+  color: white; 
+  text-align: center;
+}
+
+.custom-control-label {
+  margin-left:-200px;
+  margin-top:80px;
+}
+.container {
+  width: 100%;
+  margin-left: 20%;
+}
+.my-1 mr-2{
+  margin-left:-200px;
+  color: white;
+  text-align: center;
+  margin-top: -60px;
 }
