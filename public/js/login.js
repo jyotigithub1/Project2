@@ -21,7 +21,13 @@ $(document).ready(function () {
       console.log("Added new Record");
       alert("data added");
       // Reload the page to get the updated list
-      location.reload();
+      if(role==="Admin"){
+        window.location.href = "/admin";
+      }
+      else{
+        window.location.href = "/welcome";
+      }
+      // location.reload();
 
     });
   });
@@ -36,7 +42,6 @@ $(document).ready(function () {
       password: $("#inputPassword").val().trim()
       
     };
-    console.log(login);
     $.ajax("/api/login", {
       type: "POST",
       data: login
@@ -44,7 +49,6 @@ $(document).ready(function () {
       console.log(arguments);
       // redirect the user
       // window.location.href = "/whatever/url";
-      console.log(data);
       console.log(xhr.status);
       if (xhr.status !== 200) {
         var p = $("<p>");
