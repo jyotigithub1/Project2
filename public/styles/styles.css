@@ -34,10 +34,10 @@ a {
 
 .menu {
 	position: fixed;
-	width: 200px;
-	background-color: #241c1c;
+	width: 200px;	
 	height: 100vh;
-	color: white;
+  color: white;
+  margin-top: 90px;
 }
 
 .toggle {
