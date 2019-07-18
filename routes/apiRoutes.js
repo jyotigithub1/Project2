@@ -76,6 +76,21 @@ module.exports = function (app) {
       console.log(err);
     }
   });
+  app.post("/api/searchbythree",function(req,res){
+    console.log("reqbody ::::", req.body);
+    var searchObject = {};
+    searchObject.category = req.body.category;
+    searchObject.authors = req.body.subsearchby;
+    try{
+      db.Book.findAll({
+        where:searchObject
+      }).then(function(dbsearch){
+        res.json(dbsearch);
+      }); 
+    }catch(err){
+      console.log(err);
+    }
+  });
   
   //end of module.exports
 };
