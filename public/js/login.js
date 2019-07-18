@@ -29,9 +29,12 @@ $(document).ready(function () {
   $(document).on("click", "#login", function (event) {
     console.log("inside the click");
     event.preventDefault();
+    var role=$("#role").val().trim();
+    console.log(role);
     var login = {
       email: $("#inputEmail").val().trim(),
       password: $("#inputPassword").val().trim()
+      
     };
     console.log(login);
     $.ajax("/api/login", {
@@ -52,7 +55,13 @@ $(document).ready(function () {
         console.log("no match");
       } else {
         console.log("test");
-        window.location.href = "/welcome";
+        if(role==="Admin"){
+          window.location.href = "/admin";
+        }
+        else{
+          window.location.href = "/welcome";
+        }
+        
        
       }
     });

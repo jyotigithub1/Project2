@@ -74,12 +74,12 @@ a {
 }
 
 .books-content {
-	width: calc(100% - 200px);
+	width: calc(100% - 300px);
 	float: right;
-	margin-top: 25px;
+	margin-top: 20px;
 }
 .input-bar:focus, .input-bar:active {
-	outline: none;
+	outline: none4
 }
 
 .submit {
@@ -146,6 +146,7 @@ h2 {
   margin-inline-start: 50px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
 
 .loginForm {
   margin-left:14%;
