@@ -233,3 +233,8 @@ h2 {
   text-align: center;
   margin-top: -60px;
 }
+.author-container{
+  color: white;
+  align-items: center;
+  word-spacing: 2px;
+}
