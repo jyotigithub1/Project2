@@ -1,8 +1,10 @@
 var db = require("../models");
 var passport=require("../config/passport");
 var path = require("path");
+require("dotenv").config();
 // var isAuthenticated = require("../config/middleware/isAuthenticated");
-
+var apikey =process.env.API_KEY;
+console.log(apikey);
 module.exports = function (app) {
   // Get all examples
   app.get("/api/examples", function (req, res) {
@@ -41,13 +43,15 @@ module.exports = function (app) {
 
   // post for checking the user 
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    console.log(res.statusCode);
+    console.log(res);
     res.status(200).send();
   });
-  // calling the display
-
- 
-
+//searching the book with category
+app.get("/api/apikey", function (req, res) {
+    console.log("inside the api key");
+     res.send(apikey);  
+  
+});
 
   //end of module.exports
 };
