@@ -33,7 +33,7 @@ a {
 }
 
 .menu {
-	position: fixed;
+	float: left;
 	width: 200px;
 	background-color: #241c1c;
 	height: 100vh;
@@ -52,9 +52,9 @@ a {
 
 .tabs {
     width: 200px;
-	height: 75vh;
-	margin-top: 85px;
-	position: fixed;
+	/* height: 75vh; */
+	/* margin-top: 85px;
+	position: fixed; */
 	overflow-y: auto;
 	z-index: 10;
 }
@@ -76,7 +76,8 @@ a {
 .books-content {
 	width: calc(100% - 300px);
 	float: right;
-	margin-top: 20px;
+  margin-top: 15%;
+  padding-left: 20%;
 }
 .input-bar:focus, .input-bar:active {
 	outline: none4
@@ -212,4 +213,8 @@ h2 {
 
 #book-search-btn {
   margin-top: 10%;
+}
+
+.langSelect{
+  margin-left: 10px !important;
 }
