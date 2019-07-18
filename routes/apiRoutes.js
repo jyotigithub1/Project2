@@ -46,12 +46,12 @@ module.exports = function (app) {
     console.log(res);
     res.status(200).send();
   });
-//searching the book with category
-app.get("/api/apikey", function (req, res) {
+  //searching the book with category
+  app.get("/api/apikey", function (req, res) {
     console.log("inside the api key");
-     res.send(apikey);  
+    res.send(apikey);  
   
-});
+  });
 
   //end of module.exports
 };
