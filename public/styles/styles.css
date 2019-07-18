@@ -44,12 +44,6 @@ a {
 	display: none;
 }
 
-.title {
-	margin: 35px 0 39px;
-	font-weight: 700;
-	text-align: center;
-}
-
 .tabs {
     width: 200px;
 	height: 75vh;
@@ -148,6 +142,7 @@ h2 {
   font-weight: bold;
 }
 
+
 .loginForm {
   margin-left:14%;
   margin-bottom: 12%;
@@ -199,9 +194,10 @@ h2 {
 }
  
 .title {
-  margin-top: 40%;
-  margin-left: 30%;
+  margin-top:-130px;
   color: white;
+  /* text-align: center; */
+  font-weight: 700;  
 }
 
 .category {
@@ -211,4 +207,29 @@ h2 {
 #book-search-btn {
   margin-top: 10%;
 }
+.mr-2 {
+  margin-left:-200px;
+  color: white;
+  text-align: center;
+}
+.mx-2 {
+  margin-left:-200px;
+  margin-top: -100px;
+  color: white; 
+  text-align: center;
+}
 
+.custom-control-label {
+  margin-left:-200px;
+  margin-top:80px;
+}
+.container {
+  width: 100%;
+  margin-left: 20%;
+}
+.my-1 mr-2{
+  margin-left:-200px;
+  color: white;
+  text-align: center;
+  margin-top: -60px;
+}
