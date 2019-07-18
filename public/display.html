@@ -17,6 +17,7 @@
     <link href="/styles/styles.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
   </head>
+    
   <body id="user-display-page">
     <div class="display-container">
     <!-- <a href="/login">click here to start</a> -->
@@ -30,7 +31,7 @@
       </div>
       <div class="search-container-2">
       <h1 class="title">Welcome To Book Land</h1>
-      <div id=error></div>
+      <div id="error"></div>
       <form class="form-inline category" >
         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Search by Category</label>
         <select class="custom-select my-1 mr-sm-2" id="searchcat">
@@ -56,13 +57,14 @@
           
             <div class="custom-control custom-checkbox my-1 mr-sm-2">
               <input type="checkbox" class="custom-control-input" id="customControlInline">
-              <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+              <label class="custom-control-label" style="color: antiquewhite" for="customControlInline">Remember my preference</label>
             </div>
           
           </form>
 
       <div class="user-search-box">
         <input type="text" id="book-search" size="50" placeholder="Search.."><br>
+        <div id="errorsearchby"></div>
         <button type="button" class="btn btn-primary my-1" id="book-search-btn">Submit</button> 
       </div>
 
@@ -75,9 +77,7 @@
         </div>
       </div>
       
-    </div>  
-
-    
+    </div>   
     
     <script type="text/javascript" src="./js/book.js"></script>
   </body>
