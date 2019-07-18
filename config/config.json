@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Nikita9063!",
+    "password": "null",
     "database": "cmsproject_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Nikita9063!",
+    "password": "null",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
