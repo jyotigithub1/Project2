@@ -1,7 +1,7 @@
 $(document).ready(function () {
   console.log("inside book.js");
   
-   $(document).on("click", "#book-search-btn", function (event) {
+  $(document).on("click", "#book-search-btn", function (event) {
     console.log("inside the click");
     event.preventDefault();
     var category = $("#searchcat").val();
@@ -21,7 +21,7 @@ $(document).ready(function () {
     }
  
     else if(category !== "Language" && searchby === "Select"){
-     console.log("in case 2");
+      console.log("in case 2");
       $.ajax("/api/searchbycategory", {
         type: "POST",
         data: { category: category }
@@ -31,7 +31,7 @@ $(document).ready(function () {
     }
     
     else if(category!=="Languages" && searchby !== "Select" && subsearchby!==""){
-        var data={
+      var data={
         category:category,
         searcby:searchby,
         subsearchby:subsearchby
@@ -48,11 +48,11 @@ $(document).ready(function () {
     else if(category !== "Languages" && searchby !== "Select" && subsearchby === "" ){
       console.log("inside case 3");
       $("#error").empty();  
-       var p1 = $("<p>");
-       p1.addClass("errorsearch");
-        p1.text("*Need to specify the "+searchby+" field" );
-        p1.css("color", "red");
-        $("#errorsearchby").append(p1);
+      var p1 = $("<p>");
+      p1.addClass("errorsearch");
+      p1.text("*Need to specify the "+searchby+" field" );
+      p1.css("color", "red");
+      $("#errorsearchby").append(p1);
     }
   });
 });
