@@ -36,7 +36,7 @@ $(document).ready(function () {
         
             //display books and images
             var bookDiv = $("<div>");
-            bookDiv.addClass("book-div")
+            bookDiv.addClass("book-div");
             var bookRow = $("<div>");
             bookRow.addClass("info-row");
             var bookTitle = category[i].title;
@@ -44,28 +44,28 @@ $(document).ready(function () {
             var publishedDate = category[i].publishedDate;
             var bookImage = category[i].thumbnail;
             console.log(bookTitle, author, publishedDate);
-            console.log(bookImage)
+            console.log(bookImage);
         
             var p = $("<p>");
-            var titleDiv = $("<div>")
-            var infoDiv = $("<div>")
-            titleDiv.addClass("book-title")
-            titleDiv.html(bookTitle + "<br>")
-            infoDiv.addClass("info-text")
-            infoDiv.html(author + "<br>" + publishedDate + "<br>")
+            var titleDiv = $("<div>");
+            var infoDiv = $("<div>");
+            titleDiv.addClass("book-title");
+            titleDiv.html(bookTitle + "<br>");
+            infoDiv.addClass("info-text");
+            infoDiv.html(author + "<br>" + publishedDate + "<br>");
             var imageDiv = $("<img>");
             imageDiv.attr("src", bookImage);
-            imageDiv.addClass("images col-6")
+            imageDiv.addClass("images col-6");
             bookRow.append(imageDiv);
         
             p.append(titleDiv);
             p.append(infoDiv);
-            p.addClass("text col-6")
+            p.addClass("text col-6");
             bookRow.append(p);
             bookDiv.append(bookRow);
             $("#books-area").append(bookDiv);
-            }  //closing of main for loop
-          }
+          } //closing of main for loop
+        }
         displayBooks();
       });
     }
