@@ -37,7 +37,7 @@ module.exports = function (app) {
         id: dbUser.Id
       });
       console.log("Added");
-      res.sendFile(path.join(__dirname, "../public/display.html"));
+     
     });
   });
 
@@ -53,5 +53,31 @@ module.exports = function (app) {
   
   });
 
+  //Adding a new book
+  app.post("/api/addbook",function(req,res){
+    // console.log("req data::::::::::::"+ req.body);
+   try{
+    db.Book.create(req.body).then (function(dbBook){
+      res.send({message:true});
+      console.log("Added");
+    });
+   }catch(err){
+     console.log(err);
+   }
+  });
+  //  serach by category
+  app.post("/api/searchbycategory",function(req,res){
+    console.log("reqbody ::::", req.body);
+    try{
+      db.Book.findAll({
+        where: {category:req.body.category},
+      }).then(function(dbcatogery){
+        res.json(dbcatogery);
+      });
+    }catch(err){
+      console.log(err);
+    }
+ });
+  
   //end of module.exports
 };
