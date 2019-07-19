@@ -97,6 +97,7 @@ $(document).ready(function () {
         console.log(arguments);
         console.log(xhr.status);
         if (xhr.status !== 200) {
+          $("#error").empty();
           var p2 = $("<p>");
           p2.addClass("errortag");
           p2.text("User details does not match");
@@ -118,6 +119,18 @@ $(document).ready(function () {
           }
         
        
+        }
+      }).fail(function(xhr){
+        console.log(xhr.status);
+        if(xhr.status === 401){
+          console.log(xhr.status);
+          console.log("the error should work");
+          $("#error").empty();
+          var p3 = $("<p>");
+          p3.addClass("errortag");
+          p3.text("User details does not match");
+          p3.css("color", "red");
+          $("#error").append(p3);
         }
       });
     }
