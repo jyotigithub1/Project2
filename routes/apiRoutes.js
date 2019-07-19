@@ -6,6 +6,13 @@ var apikey =process.env.API_KEY;
 console.log(apikey);
 module.exports = function (app) {
   // Get all examples
+  app.post("/api/recovery", function(req, res) {
+    console.log(req.body)
+    db.user.findOne({where:{email:req.body.email}}).then(function(user){
+      res.json(user);
+
+    })
+  })
   app.get("/api/examples", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.json(dbExamples);
@@ -114,7 +121,7 @@ module.exports = function (app) {
     }
   });
 
-  app.get("whatever/url", function(req, res) {
+  app.get("/whatever/url", function(req, res) {
     if (req.user) {
       var userObj = {
         // put in here whatever you want
@@ -123,6 +130,6 @@ module.exports = function (app) {
       res.json(userObj);
     }
   });
-  
-  //end of module.exports
+
+ 
 };

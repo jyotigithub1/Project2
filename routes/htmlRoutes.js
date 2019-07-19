@@ -52,9 +52,12 @@ module.exports = function(app) {
     // console.log("here's some stuff about the user:", req.user.firstname + " " + req.user.lastname+ " Role"+req.user.role);
     res.sendFile(path.join(__dirname, "../public/Admin.html"));
   });
-
+  app.get("/forget",function(req,res){
+    res.sendFile(path.join(__dirname, "../public/forget.html"));
+  })
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     // res.render("404");
+    res.send("<h1>404</h1>")
   });
 };

@@ -11,8 +11,10 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/floating-labels/">
 
     <!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="./css/floating-labels.css" rel="stylesheet">
     <link href="./styles/styles.css" rel="stylesheet">
@@ -34,14 +36,19 @@
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <label for="inputEmail">Email address</label>
   </div>
+  <div class="show-recovered-pass">
+    <p class="recovered-text"></p>
+  </div>
   <div class="form-label-group" id="password">
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+  <button class="btn btn-lg btn-primary btn-block" id="recover-password" type="submit">Submit</button>
   <div class="text-center">
       <a class="d-block small mt-3" href="index.html">Login Page</a>
 </div>
    <p class="mt-5 mb-3 text-muted text-center">&copy; 2019-2020</p>
  
 </form>
+<script type="text/javascript" src="./js/forgot.js"></script>
+
 </body>
 </html>
