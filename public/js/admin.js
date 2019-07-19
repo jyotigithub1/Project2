@@ -8,6 +8,7 @@ $(document).ready(function() {
     var comments = $.trim($("#comments").val());
     console.log(category);
     console.log(comments);
+    $("#add").empty(); 
     if (category === "Languages") {
       var p = $("<p>");
       p.addClass("errortag");
@@ -104,6 +105,7 @@ $(document).ready(function() {
       type:"GET"
     }).then(function (dbcomments){
       console.log(dbcomments);
+      // need to work on this 
         
     });
   });
