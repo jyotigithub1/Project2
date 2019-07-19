@@ -18,6 +18,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/register.html"));
   });
   app.get("/addbooks",function(req,res){
+   
+   
     res.sendFile(path.join(__dirname, "../public/addbooks.html"));
   });
  
@@ -29,6 +31,11 @@ module.exports = function(app) {
       //   examples: dbExamples
       // });
     });
+  });
+
+  app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/");
   });
 
   // Load example page and pass in an example by id
@@ -45,8 +52,6 @@ module.exports = function(app) {
     // console.log("here's some stuff about the user:", req.user.firstname + " " + req.user.lastname+ " Role"+req.user.role);
     res.sendFile(path.join(__dirname, "../public/Admin.html"));
   });
-
-
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

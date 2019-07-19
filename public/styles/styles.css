@@ -165,6 +165,7 @@ h2 {
 }
 .navbar {
   margin-bottom: 0%;
+  background: transparent !important;
 }
 #user-display-page {
   background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
@@ -268,4 +269,24 @@ h2 {
   color: white;
   text-align: center;
   margin-top: -60px;
+}
+
+#categorydiv {
+  display: none;
+}
+#adminSide{
+  width:11rem;
+  height:700px; 
+  margin-left:5px;
+  font-size:20px;
+  float:left;
+  
+}
+.adminMain{
+  width:70rem;
+  height:700px; 
+  margin-left:5px;
+  font-size:20px;
+  float:left;
+    
 }
