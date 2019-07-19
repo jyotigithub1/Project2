@@ -15,7 +15,7 @@ $(document).ready(function () {
     };
     console.log("user info:", postregister);
     if(postregister.firstname==="" && postregister.lastname==="" && postregister.email==="" &&
-     postregister.password==="" && postregister.cnfpassword==="" && postregister.role==="Role")
+     postregister.password==="" && postregister.role==="Role")
     {
       $("#error").empty();
       var p=$("<p>");
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     }
     else if(postregister.firstname==="" || postregister.lastname==="" || postregister.email==="" ||
-    postregister.password==="" || postregister.cnfpassword==="" || postregister.role==="Role"){
+    postregister.password==="" || postregister.role==="Role"){
       $("#error").empty();
       var p1=$("<p>");
       p1.addClass("errormsg");
@@ -86,7 +86,7 @@ $(document).ready(function () {
       var p1=$("<p>");
       p1.addClass("errormsg");
       p1.css("color","red");
-      p1.text("*please Enter the details");
+      p1.text("*please Enter missing the details");
       $("#error").append(p1);
     }
     else{
