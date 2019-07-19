@@ -1,6 +1,6 @@
 # Project-2
-
-### HTML/CSS/Bootstrap - Node - Express - SequelPro - Heroku - MVP
+ ## BOOKSBLOG
+#### HTML/CSS/Bootstrap - Node - Express - SequelPro - Heroku - MVP
 
 ### Overview
 
