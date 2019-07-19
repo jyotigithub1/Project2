@@ -8,25 +8,24 @@ $(document).ready(function() {
     var comments = $.trim($("#comments").val());
     console.log(category);
     console.log(comments);
+    $("#add").empty(); 
     if (category === "Languages") {
       var p = $("<p>");
       p.addClass("errortag");
       p.text("*Need to select Category atleast for the search");
       p.css("color", "red");
-      $("#error").append(p);
+      $("#add").append(p);
     } else {
       $.ajax("/api/apikey", {
         type: "GET"
       }).then(function(data) {
         console.log("Apikey inside the route" + data);
-        var bookobj= searchCategory(category, data);
-        console.log(bookobj);
+        searchCategory(category, data);
       });
     }
   });
  
-  function searchCategory(category, apikey, cb) {
-    var count=0;  
+  function searchCategory(category, apikey) {
     var queryURL =
       "https://www.googleapis.com/books/v1/volumes?q=" +
       category +
@@ -37,6 +36,7 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       console.log(response);
+      var newArr = [];
       for (var i = 0; i < response.items.length; i++) {
         var title = response.items[i].volumeInfo.title;
         var authors = response.items[i].volumeInfo.authors["0"];
@@ -62,38 +62,52 @@ $(document).ready(function() {
           category: category,
           usercomment:$.trim($("#comments").val())
         };
-        console.log(bookObj);
-        $.ajax("/api/addbook", {
-          type: "POST",
-          data: bookObj
-        }).then(function (bookadded) {
-          console.log(bookadded);  
-          if (bookadded.message === true) {
-            console.log("Added new Record");
-            $("#error").empty();
-            var p = $("<p>");
-            p.addClass("message");
-            p.text("New category Added");
-            p.css("color", "blue");
-            $("#error").append(p);
-          } else {
-            $("#error").empty();
-            var p1 = $("<p>");
-            p1.addClass("errortag");
-            p1.text("*Not able to add data");
-            p1.css("color", "red");
-            $("#error").append(p1);
-
-          }
-      
-          $("#error").empty();
-     
-        });
+        
+        console.log("bookObj", bookObj);
+        newArr.push(bookObj);
       }
+      console.log("newArr", newArr);
+      $.ajax("/api/addbook", {
+        type: "POST",
+        data: { dataArr: newArr }
+      }).then(function (bookadded) {
+        console.log(bookadded.message); 
+        $("#add").empty(); 
+        if (bookadded.message === true) {
+          console.log("Added new Record");
+          var p1 = $("<p>");
+          p1.addClass("message");
+          p1.text("New category Added");
+          p1.css("color", "red");
+          $("#add").append(p1);
+        } else {
+          $("#add").empty();
+          var p2 = $("<p>");
+          p2.addClass("error-tag");
+          p2.text("*Not able to add data");
+          p2.css("color", "red");
+          $("#add").append(p2);
+        }
+      
+          
+     
+      });
+      // }
     });
   }
-
   $("#books-span").click(function() {
     $("#categorydiv").show();
   });
+  $("#books-span1").click(function(){
+    console.log("inside the comments click");
+    $("#categorydiv").hide();
+    $.ajax("/api/comments",{
+      type:"GET"
+    }).then(function (dbcomments){
+      console.log(dbcomments);
+      // need to work on this 
+        
+    });
+  });
 });
+ 

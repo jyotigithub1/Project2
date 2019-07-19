@@ -3,7 +3,10 @@ $(".hide-row").hide();
 $(document).ready(function () {
   console.log("inside book.js");
   // make a GET request 
-  
+  var fname=sessionStorage.getItem("fname");
+  var lname=sessionStorage.getItem("lname");
+  var name=(fname + lname).toUpperCase();
+  $("#name").append(name);
   $(document).on("click", "#book-search-btn", function (event) {
     console.log("inside the click");
     event.preventDefault();
