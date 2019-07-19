@@ -43,6 +43,7 @@ $(document).ready(function () {
             var bookTitle = category[i].title;
             var author = category[i].authors;
             var publishedDate = category[i].publishedDate;
+            publishedDate = moment(publishedDate, "YYYY-MM-DD").format("MMMM Do YYYY");
             var bookImage = category[i].thumbnail;
             console.log(bookTitle, author, publishedDate);
             console.log(bookImage);
@@ -51,9 +52,9 @@ $(document).ready(function () {
             var titleDiv = $("<div>");
             var infoDiv = $("<div>");
             titleDiv.addClass("book-title");
-            titleDiv.html(bookTitle + "<br>");
+            titleDiv.html("Title: " + bookTitle + "<br>");
             infoDiv.addClass("info-text");
-            infoDiv.html(author + "<br>" + publishedDate + "<br>");
+            infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>");
             var imageDiv = $("<img>");
             imageDiv.attr("src", bookImage);
             imageDiv.addClass("images col-6");
