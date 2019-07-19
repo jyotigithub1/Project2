@@ -30,19 +30,41 @@ module.exports = function (app) {
   });
   //Post data for register
   app.post("/api/register", function (req, res) {
-    db.User.create(req.body).then(function (dbUser) {
-      res.json({
-        id: dbUser.Id
+    if (req.body.role === "admin") {
+      db.User.findOne({ where: { role: "admin" } }).then(function(dbRes) {
+        console.log(dbRes);
+        if (!dbRes) {
+          db.User.create(req.body).then(function (dbUser) {
+            res.redirect(307, "/api/login");
+            console.log("Added");
+          });
+        }
+        else {
+          res.json({
+            status: false,
+            message: "There's already an Admin"
+          });
+        }
       });
-      console.log("Added");
-     
-    });
+    }
+    else {
+      db.User.create(req.body).then(function (dbUser) {
+        res.redirect(307, "/api/login");
+        console.log("Added");
+      });
+    }
   });
 
   // post for checking the user 
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    console.log(res);
-    res.status(200).send();
+    console.log(req.user.role);
+    //asdf
+    res.status(200).send({
+      firstname:req.user.firstname,
+      lastname:req.user.lastname,
+      role: req.user.role
+            
+    });
   });
   //searching the book with category
   app.get("/api/apikey", function (req, res) {
@@ -89,6 +111,16 @@ module.exports = function (app) {
       }); 
     }catch(err){
       console.log(err);
+    }
+  });
+
+  app.get("whatever/url", function(req, res) {
+    if (req.user) {
+      var userObj = {
+        // put in here whatever you want
+        // role: req.user.role
+      };
+      res.json(userObj);
     }
   });
   

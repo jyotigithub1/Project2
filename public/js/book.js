@@ -2,6 +2,7 @@ $(".hide-row").hide();
 
 $(document).ready(function () {
   console.log("inside book.js");
+  // make a GET request 
   
   $(document).on("click", "#book-search-btn", function (event) {
     console.log("inside the click");
