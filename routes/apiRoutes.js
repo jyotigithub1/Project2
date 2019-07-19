@@ -82,16 +82,29 @@ module.exports = function (app) {
 
   //Adding a new book
   app.post("/api/addbook",function(req,res){
-    // console.log("req data::::::::::::"+ req.body);
+    console.log("req data::::::::::::", req.body);
     try{
-      db.Book.create(req.body).then (function(dbBook){
-        res.send({message:true});
-        console.log("Added");
-      });
+      createBook(0, req.body.dataArr, res);
+      
     }catch(err){
       console.log(err);
     }
+    // res.send({message:true});
   });
+
+  function createBook(i, dataArr, res) {
+    db.Book.create(dataArr[i]).then (function(dbBook){
+      i++;
+      if (i < dataArr.length) {
+        console.log("still more books");
+        createBook(i, dataArr, res);
+      }
+      else {
+        res.send({message:true});
+        console.log("Added");
+      }
+    });
+  }
   //  serach by category
   app.post("/api/searchbycategory",function(req,res){
     console.log("reqbody ::::", req.body);
@@ -121,15 +134,16 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/whatever/url", function(req, res) {
-    if (req.user) {
-      var userObj = {
-        // put in here whatever you want
-        // role: req.user.role
-      };
-      res.json(userObj);
+  app.get("/api/comments", function(req, res) {
+    try{
+      db.Book.findAll({attributes:["usercomment","createdAt","updatedAt"]}).then(function(dbcatogery){
+        res.json(dbcatogery);
+      });
+    }catch(err){
+      console.log(err);
     }
+     
+    
   });
 
- 
 };
