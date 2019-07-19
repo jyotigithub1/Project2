@@ -205,7 +205,7 @@ h2 {
   color: white;
 }
 
-.title {
+.title{
   color: white;
   /* text-align: center; */
   font-weight: 700;
@@ -217,6 +217,7 @@ h2 {
 
 #book-search-btn {
   margin-top: 10%;
+  margin-left: -550px;
 }
 
 .info-row {
@@ -258,18 +259,25 @@ h2 {
 }
 
 .mr-2 {
-  margin-left: -200px;
+  margin-left: -500px;
   color: white;
   text-align: center;
+  padding: 40px;
+  width: 30px;
 }
-
-.mx-2 {
-  margin-left: -200px;
-  margin-top: -100px;
-  color: white;
-  text-align: center;
+.searchby{
+  margin-left: -380px;
+  padding: 40px;
+  width: 30px;
 }
+#book-search{
+  margin-left: -620px;
+}
+#book-search-btn{
+  background: blue;
+ float: inherit;
 
+}
 .custom-control-label {
   margin-left: -200px;
   margin-top: 80px;
@@ -278,13 +286,6 @@ h2 {
 .container {
   width: 100%;
   margin-left: 10%;
-}
-
-.my-1 mr-2 {
-  margin-left: -200px;
-  color: white;
-  text-align: center;
-  margin-top: -60px;
 }
 
 .author-container {
