@@ -307,3 +307,8 @@ h2 {
   float:left;
     
 }
+.author-container {
+  color: white;
+  align-items: center;
+  word-spacing: 2px;
+}
