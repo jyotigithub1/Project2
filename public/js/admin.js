@@ -105,7 +105,7 @@ $(document).ready(function() {
       type:"GET"
     }).then(function (dbcomments){
       console.log(dbcomments);
-        // need to work on this 
+      // need to work on this 
         
     });
   });
