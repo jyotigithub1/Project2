@@ -21,10 +21,10 @@ favorite IT books.
   
   #### OUR GROUP MEMBERS
   
-  1. Andrew Griswold 
-  2. Joel Hernandez 
-  3. Jyoti Das
-  4. Nikita Mehata
+  a. Andrew Griswold 
+  b. Joel Hernandez 
+  c. Jyoti Das
+  d. Nikita Mehata
   
   ## ## The link is below:
 
