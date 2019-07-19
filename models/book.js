@@ -11,9 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull:false,
     },
     description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    
+      type: DataTypes.TEXT    
     },
     averageRating: {
       type: DataTypes.FLOAT,
@@ -29,7 +27,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     publisher: {
       type: DataTypes.STRING, 
-      allowNull: false,
     },
     previewlink: {
       type: DataTypes.STRING, 
