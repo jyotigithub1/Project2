@@ -29,6 +29,7 @@
 
 
                   </div>
+                  <div id="error"></div>
                   <div class="card-body" style="text-align:left">
                         <form action="/api/register" method="post">
                               <div class="form-group">
@@ -59,12 +60,12 @@
                                                 <input name="password" class="form-control" id="cmsInputPassword1"
                                                       type="password" placeholder="Password" required>
                                           </div>
-                                          <div class="col-md-6">
+                                          <!-- <div class="col-md-6">
                                                 <label for="cmsConfirmPassword">Confirm password</label>
                                                 <input name="passwordConfirm" class="form-control"
                                                       id="cmsConfirmPassword" type="password"
                                                       placeholder="Confirm password" required>
-                                          </div>
+                                          </div> -->
                                     </div>
                               </div>
                                     <div class="form-group">
@@ -72,8 +73,8 @@
                                     <div class="col-md-6">
                                           <select class="form-control" id="role">
                                                 <option selected>Role</option>
-                                                <option value="Admin">Admin</option>
                                                 <option value="user">User</option>
+                                                <option value="admin">Admin</option>
                                           </select>
                                     </div>
                                     </div>

@@ -5,7 +5,9 @@ $(document).ready(function() {
     console.log("inside the click");
     event.preventDefault();
     var category = $("#addcat").val();
+    var comments = $.trim($("#comments").val());
     console.log(category);
+    console.log(comments);
     if (category === "Languages") {
       var p = $("<p>");
       p.addClass("errortag");
@@ -17,12 +19,14 @@ $(document).ready(function() {
         type: "GET"
       }).then(function(data) {
         console.log("Apikey inside the route" + data);
-        searchCategory(category, data);
+        var bookobj= searchCategory(category, data);
+        console.log(bookobj);
       });
     }
   });
-
-  function searchCategory(category, apikey) {
+ 
+  function searchCategory(category, apikey, cb) {
+    var count=0;  
     var queryURL =
       "https://www.googleapis.com/books/v1/volumes?q=" +
       category +
@@ -55,32 +59,41 @@ $(document).ready(function() {
           publishedDate: publishedDate,
           publisher: publisher,
           previewlink: previewlink,
-          category: category
+          category: category,
+          usercomment:$.trim($("#comments").val())
         };
         console.log(bookObj);
         $.ajax("/api/addbook", {
           type: "POST",
           data: bookObj
-        }).then(function(data) {
-          if (data.message === true) {
+        }).then(function (bookadded) {
+          console.log(bookadded);  
+          if (bookadded.message === true) {
             console.log("Added new Record");
+            $("#error").empty();
             var p = $("<p>");
             p.addClass("message");
             p.text("New category Added");
             p.css("color", "blue");
             $("#error").append(p);
           } else {
-            var p = $("<p>");
-            p.addClass("errortag");
-            p.text("*Not able to add data");
-            p.css("color", "red");
-            $("#error").append(p);
+            $("#error").empty();
+            var p1 = $("<p>");
+            p1.addClass("errortag");
+            p1.text("*Not able to add data");
+            p1.css("color", "red");
+            $("#error").append(p1);
+
           }
-          // Reload the page to get the updated list
-          // location.reload();
+      
+          $("#error").empty();
+     
         });
-        $("#error").empty();
       }
     });
   }
+
+  $("#books-span").click(function() {
+    $("#categorydiv").show();
+  });
 });
