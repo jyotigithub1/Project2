@@ -38,6 +38,10 @@ module.exports = function(sequelize, DataTypes) {
     category:{
       type:DataTypes.STRING,
       allowNull:false
+    },
+    usercomment:{
+      type:DataTypes.TEXT,
+      allowNull:true
     }
     
   });

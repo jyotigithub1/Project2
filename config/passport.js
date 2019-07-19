@@ -4,13 +4,14 @@ var db = require("../models");
 
 passport.use(
   new LocalStrategy({
-    usernameField: "email"
+    usernameField: "email",
+     
   },
   function (email, password, done) {
+    var userObj={};
+    userObj.email=email;
     db.User.findOne({
-      where: {
-        email: email
-      }
+      where:userObj        
     }).then(function (dbUser) {
       if (!dbUser) {
         return done(null, false, {
