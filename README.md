@@ -26,7 +26,7 @@ favorite IT books.
   3. Jyoti Das
   4. Nikita Mehata
   
-  ## ## The link is below:
+  ## The link is below:
 
 * Check out [this demo version of the site](https://afternoon-stream-94315.herokuapp.com/
 )
