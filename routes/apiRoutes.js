@@ -129,7 +129,7 @@ module.exports = function (app) {
 
   app.get("/api/comments", function(req, res) {
     try{
-      db.Book.findAll({attributes:["id","usercomment","createdAt","updatedAt"]}).then(function(dbcatogery){
+      db.Book.findAll({attributes:["id","category","usercomment","createdAt","updatedAt"]}).then(function(dbcatogery){
         res.json(dbcatogery);
       });
     }catch(err){
