@@ -104,7 +104,7 @@ $(document).ready(function() {
   $("#books-span").click(function() {
     $("#add").empty();
     $("#categorydiv").show();
-     $("#commentdiv").hide();
+    $("#commentdiv").hide();
 
   });
 
@@ -130,7 +130,7 @@ $(document).ready(function() {
     });
   });
   function displayEmpty() {
-   commentContainer.empty();
+    commentContainer.empty();
  
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
@@ -147,18 +147,18 @@ $(document).ready(function() {
     var tr=$("<tr>");
     for (var i = 0; i < posts.length; i++) {
       // tr.data("comments",posts);
-    var create=  moment( posts[i].createdAt).format("MMMM Do YYYY, h:mm:ss a");
-    var update=moment(posts[i].updatedAt).format("MMMM Do YYYY, h:mm:ss a");
-     tbody.append("<tr><td>" +  posts[i].id + "</td>" +"<td>" +  posts[i].usercomment + "</td>" + "<td>" +  create+ "</td>" + "<td>" +  posts[i].updatedAt + "</td></tr>");
-     //  tr.append("</tr>");
-     tbody.append(tr);
-    //  tbody.append("</tr>");
-     tablediv.prepend(tr);
+      var create= moment( posts[i].createdAt).format("MMMM Do YYYY, h:mm:ss a");
+      var update=moment(posts[i].updatedAt).format("MMMM Do YYYY, h:mm:ss a");
+      tbody.append("<tr><td>" + posts[i].id + "</td>" +"<td>" + posts[i].usercomment + "</td>" + "<td>" + create+ "</td>" + "<td>" + posts[i].updatedAt + "</td></tr>");
+      //  tr.append("</tr>");
+      tbody.append(tr);
+      //  tbody.append("</tr>");
+      tablediv.prepend(tr);
          
     }
    
     // location.reload();
-   }
+  }
    
 });
  
