@@ -3,7 +3,7 @@ $(document).ready(function() {
   console.log("inside the click");
   var fname=sessionStorage.getItem("fname");
   var lname=sessionStorage.getItem("lname");
-  var name=(fname+ " " + lname).toUpperCase();
+  var name=(fname+"  "+ lname).toUpperCase();
   $("#adminName").append(name);
   var posts;
   var commentContainer = $(".comment-container");
@@ -140,7 +140,6 @@ $(document).ready(function() {
   function initializeRows(posts) {
     // commentContainer.empty();
     $("#commentdiv").show();
-    debugger;
     console.log(posts.length);
     var tablediv=$("#commentdiv>");
     var tbody=$(".table");
@@ -149,9 +148,9 @@ $(document).ready(function() {
       // tr.data("comments",posts);
       var create= moment( posts[i].createdAt).format("MMMM Do YYYY, h:mm:ss a");
       var update=moment(posts[i].updatedAt).format("MMMM Do YYYY, h:mm:ss a");
-      tbody.append("<tr><td>" + posts[i].id + "</td>" +"<td>" + posts[i].usercomment + "</td>" + "<td>" + create+ "</td>" + "<td>" + posts[i].updatedAt + "</td></tr>");
+      tbody.append("<tr><td>" + posts[i].id + "</td>" +"<td>" + posts[i].usercomment + "</td>" + "<td>" + create+ "</td>" + "<td>" + update + "</td></tr>");
       //  tr.append("</tr>");
-      tbody.append(tr);
+      tbody.prepend(tr);
       //  tbody.append("</tr>");
       tablediv.prepend(tr);
          

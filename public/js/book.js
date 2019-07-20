@@ -5,7 +5,7 @@ $(document).ready(function () {
   // make a GET request 
   var fname=sessionStorage.getItem("fname");
   var lname=sessionStorage.getItem("lname");
-  var name=(fname + " " + lname).toUpperCase();
+  var name=(fname+" " + lname).toUpperCase();
   $("#name").append(name);
   $(document).on("click", "#book-search-btn", function (event) {
     console.log("inside the click");
