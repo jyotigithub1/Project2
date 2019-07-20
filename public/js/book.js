@@ -46,8 +46,16 @@ $(document).ready(function () {
           category: category
         }
       }).then(function (category) {
+        if(category.length===0){
+          var p5 = $("<p>");
+          p5.addClass("errortag");
+          p5.text("Book Coming soon..!!");
+          p5.css("color", "red");
+          $("#error").append(p5);
+        }else{
         console.log(category);
         displayBooks(category);
+        }
       });
     } else if (category === "Language" && searchby !== "Select") {
       console.log("in case 2");
@@ -74,7 +82,16 @@ $(document).ready(function () {
         data: data
       }).then(function (category) {
         console.log(category);
+        if(category.length===0){
+          var p5 = $("<p>");
+          p5.addClass("errortag");
+          p5.text("Books Coming soon..!!");
+          p5.css("color", "red");
+          $("#error").append(p5);
+        }
+        else{
         displayBooks(category);
+        }
       });
     } else if (
       category !== "Languages" &&
