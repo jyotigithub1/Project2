@@ -173,7 +173,6 @@ h2 {
 
 .navbar {
   margin-bottom: 0%;
-  background: transparent !important;
 }
 
 #user-display-page {
@@ -187,7 +186,7 @@ h2 {
 }
 
 .profile-style {
-  margin-left: 70%;
+  margin-left: 50%;
 }
 
 .user-search-box {
@@ -201,13 +200,13 @@ h2 {
 }
 
 .form-inline {
-  margin-left: 39%;
+  margin-left: 35%;
   /* margin-top: 2%; */
   color: white;
 }
 
 .category {
-  margin-left: 38%;
+  margin-left: 34%;
 }
 
 .title{
@@ -279,7 +278,6 @@ h2 {
   /* margin-left: -620px; */
 }
 #book-search-btn{
-  background: blue;
  float: inherit;
 
 }
