@@ -101,7 +101,7 @@ $(document).ready(function() {
       });
       // }
     });
-      }
+  }
   $("#books-span").click(function() {
     $("#add").empty();
     $("#categorydiv").show();
