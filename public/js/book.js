@@ -48,22 +48,31 @@ $(document).ready(function () {
             var publishedDate = category[i].publishedDate;
             publishedDate = moment(publishedDate, "YYYY-MM-DD").format("MMMM Do YYYY");
             var bookImage = category[i].thumbnail;
+            var rating = category[i].averageRating;
             console.log(bookTitle, author, publishedDate);
             console.log(bookImage);
+
+            var preview = category[i].previewlink;
+            var linkName = $("<a>");
+            linkName.attr("href", preview);
+            linkName.addClass("link-name");
+            linkName.text(bookTitle);
+            linkName.attr("target","_blank")
         
             var p = $("<p>");
             var titleDiv = $("<div>");
             var infoDiv = $("<div>");
             titleDiv.addClass("book-title");
-            titleDiv.html("Title: " + bookTitle + "<br>");
+            linkName.html(bookTitle + "<br>");
+            linkName.addClass("book-title")
             infoDiv.addClass("info-text");
-            infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>");
+            infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>" + "Rating: " + rating + "<br>");
             var imageDiv = $("<img>");
             imageDiv.attr("src", bookImage);
             imageDiv.addClass("images col-6");
             bookRow.append(imageDiv);
         
-            p.append(titleDiv);
+            p.append(linkName);
             p.append(infoDiv);
             p.addClass("text col-6");
             bookRow.append(p);
