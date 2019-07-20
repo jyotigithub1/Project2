@@ -16,14 +16,15 @@ favorite IT books.
   
   ## The link is below:
 
-* Check out [this demo version of the site](https://afternoon-stream-94315.herokuapp.com/
-)
+* Check out https://whispering-ocean-74883.herokuapp.com/)
+
 
 ## Description
 
 This application demonstrates a simple full stack application with a front end implemented with HTML/CSS/Bootstrap and elements from the Materialize framework and the backend implemented with Node.js, MySql Database, MVP and Express.
 
 # Our Project have two roles
+1.Authencation:User has to login to access the blog, first time user need to register as a user.with the Login credientails he can login to the system.
 1. User: User able to search different IT books. User can select specific book and then they are able to write reviews. Other users are able to see their review when they come across that book and comment on that post or write their own post.
 
 2.  Admin: Admins have complete control over all book reviews and comments. 
@@ -43,3 +44,4 @@ Next, install the application dependencies.
 	npm install mySql
 	
 Finally, run the node server locally.
+
