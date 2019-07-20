@@ -53,8 +53,8 @@ $(document).ready(function () {
           p5.css("color", "red");
           $("#error").append(p5);
         }else{
-        console.log(category);
-        displayBooks(category);
+          console.log(category);
+          displayBooks(category);
         }
       });
     } else if (category === "Language" && searchby !== "Select") {
@@ -90,7 +90,7 @@ $(document).ready(function () {
           $("#error").append(p5);
         }
         else{
-        displayBooks(category);
+          displayBooks(category);
         }
       });
     } else if (
