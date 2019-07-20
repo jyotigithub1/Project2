@@ -1,23 +1,11 @@
 # Project-2
-
-### HTML/CSS/Bootstrap - Node - Express - SequelPro - Heroku - MVP
+ ## BOOKSWORLD
+#### HTML/CSS/Bootstrap - Node - Express - SequelPro - Heroku - MVP
 
 ### Overview
 
 An App which helps to make an online community centered around programmers and their 
 favorite IT books.
-
-
-## Before Starting 
-
-- [ ] Invite all collaborators
-- [ ] Create a slack channel and invite all the team members and the instructional staff
-- [ ] Protect the master branch
-- [ ] Set up a pipeline with heroku with a staging environment and a production environment
-- [ ] Setup the staging app to deploy the master branch automatically
-  - [ ] each of your team members names and links to their github profiles
-  - [ ] the title of your project
-  - [ ] a link to your production deployed version
   
   #### OUR GROUP MEMBERS
   

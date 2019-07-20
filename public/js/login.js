@@ -112,6 +112,7 @@ $(document).ready(function () {
 
           if(data.role==="admin"){
             $("#categorydiv").hide();
+            $("#commentdiv").hide();
             window.location.href = "/admin";
           }
           else{
