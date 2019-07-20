@@ -1,6 +1,6 @@
 $(document).ready(function () {
   console.log("Inside the js");
-
+  
   //Eventlistner for register submit
   $(document).on("click", "#register_submit", function (event) {
     console.log("inside the click");
