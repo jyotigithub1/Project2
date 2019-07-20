@@ -57,14 +57,14 @@ $(document).ready(function () {
             linkName.attr("href", preview);
             linkName.addClass("link-name");
             linkName.text(bookTitle);
-            linkName.attr("target","_blank")
+            linkName.attr("target","_blank");
         
             var p = $("<p>");
             var titleDiv = $("<div>");
             var infoDiv = $("<div>");
             titleDiv.addClass("book-title");
             linkName.html(bookTitle + "<br>");
-            linkName.addClass("book-title")
+            linkName.addClass("book-title");
             infoDiv.addClass("info-text");
             infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>" + "Rating: " + rating + "<br>");
             var imageDiv = $("<img>");
