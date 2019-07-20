@@ -202,7 +202,7 @@ h2 {
 
 .form-inline {
   margin-left: 39%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   color: white;
 }
 
@@ -218,7 +218,7 @@ h2 {
 
 #book-search-btn {
   margin-top: 10%;
-  margin-left: -550px;
+  /* margin-left: -550px; */
 }
 
 .info-row {
@@ -264,11 +264,11 @@ h2 {
 }
 
 .mr-2 {
-  margin-left: -500px;
+  /* margin-left: -500px; */
   color: white;
   text-align: center;
   padding: 40px;
-  width: 30px;
+  /* width: 30px; */
 }
 .searchby{
   margin-left: -380px;
@@ -276,7 +276,7 @@ h2 {
   width: 30px;
 }
 #book-search{
-  margin-left: -620px;
+  /* margin-left: -620px; */
 }
 #book-search-btn{
   background: blue;
