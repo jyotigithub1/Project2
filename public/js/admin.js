@@ -27,6 +27,7 @@ $(document).ready(function() {
       }).then(function(data) {
         console.log("Apikey inside the route" + data);
         searchCategory(category, data);
+       
       });
     }
   });
@@ -100,7 +101,7 @@ $(document).ready(function() {
       });
       // }
     });
-  }
+      }
   $("#books-span").click(function() {
     $("#add").empty();
     $("#categorydiv").show();
@@ -111,6 +112,8 @@ $(document).ready(function() {
   $("#books-span1").click(function(){
     console.log("inside the comments click");
     $("#categorydiv").hide();
+    $("#addcat").val("");
+    $("#comments").val("");
     // $("#commentdiv").show();
     $.ajax("/api/comments",{
       type:"GET"
@@ -148,7 +151,7 @@ $(document).ready(function() {
       // tr.data("comments",posts);
       var create= moment( posts[i].createdAt).format("MMMM Do YYYY, h:mm:ss a");
       var update=moment(posts[i].updatedAt).format("MMMM Do YYYY, h:mm:ss a");
-      tbody.append("<tr><td>" + posts[i].id + "</td>" +"<td>" + posts[i].usercomment + "</td>" + "<td>" + create+ "</td>" + "<td>" + update + "</td></tr>");
+      tbody.append("<tr><td>" + posts[i].id + "</td>" +"<td>" + posts[i].category + "</td>" +"<td>" + posts[i].usercomment + "</td>" + "<td>" + create+ "</td>" + "<td>" + update + "</td></tr>");
       //  tr.append("</tr>");
       tbody.prepend(tr);
       //  tbody.append("</tr>");

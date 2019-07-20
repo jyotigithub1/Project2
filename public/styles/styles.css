@@ -326,13 +326,13 @@ h2 {
   align-items: center;
   word-spacing: 2px;
 }
-table {
+ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-td, th {
+ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -340,7 +340,7 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
+} 
 
 .col-6 {
   height: 280px;
