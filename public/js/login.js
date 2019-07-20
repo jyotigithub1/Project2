@@ -4,6 +4,7 @@ $(document).ready(function () {
   //Eventlistner for register submit
   $(document).on("click", "#register_submit", function (event) {
     console.log("inside the click");
+    sessionStorage.clear();
     event.preventDefault();
     var postregister = {
       firstname: $("#cmsInputName").val().trim(),
@@ -47,7 +48,10 @@ $(document).ready(function () {
         $("#error").append(p2);
         // OPTIONAL save info to local storage
         // Reload the page to get the updated list
-        console.log(response.role);
+        console.log(response);
+        sessionStorage.setItem("fname", response.firstname);
+        sessionStorage.setItem("lname", response.lastname);
+
         if(response.role==="admin"){
           window.location.href = "/admin";
         }
