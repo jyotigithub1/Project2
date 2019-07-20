@@ -1,6 +1,12 @@
 $(document).ready(function() {
   console.log("inside admin.js");
   console.log("inside the click");
+  var fname=sessionStorage.getItem("fname");
+  var lname=sessionStorage.getItem("lname");
+  var name=(fname+ " " + lname).toUpperCase();
+  $("#adminName").append(name);
+  var posts;
+  var commentContainer = $(".comment-container");
   $(document).on("click", "#addbooks", function(event) {
     console.log("inside the click");
     event.preventDefault();
@@ -96,18 +102,63 @@ $(document).ready(function() {
     });
   }
   $("#books-span").click(function() {
+    $("#add").empty();
     $("#categorydiv").show();
+     $("#commentdiv").hide();
+
   });
+
   $("#books-span1").click(function(){
     console.log("inside the comments click");
     $("#categorydiv").hide();
+    // $("#commentdiv").show();
     $.ajax("/api/comments",{
       type:"GET"
     }).then(function (dbcomments){
-      console.log(dbcomments);
+     
+      console.log("inside the post");
+      posts=dbcomments;
+      console.log(posts);
+      if (!posts || !posts.length) {
+        displayEmpty();
+      }
+      else {
+        initializeRows(posts);
+      }
       // need to work on this 
         
     });
   });
+  function displayEmpty() {
+   commentContainer.empty();
+ 
+    var messageH2 = $("<h2>");
+    messageH2.css({ "text-align": "center", "margin-top": "50px" });
+    messageH2.html("No Comments yet..!!");
+    commentContainer.append(messageH2);
+  }
+  function initializeRows(posts) {
+    // commentContainer.empty();
+    $("#commentdiv").show();
+    debugger;
+    console.log(posts.length);
+    var tablediv=$("#commentdiv>");
+    var tbody=$(".table");
+    var tr=$("<tr>");
+    for (var i = 0; i < posts.length; i++) {
+      // tr.data("comments",posts);
+    var create=  moment( posts[i].createdAt).format("MMMM Do YYYY, h:mm:ss a");
+    var update=moment(posts[i].updatedAt).format("MMMM Do YYYY, h:mm:ss a");
+     tbody.append("<tr><td>" +  posts[i].id + "</td>" +"<td>" +  posts[i].usercomment + "</td>" + "<td>" +  create+ "</td>" + "<td>" +  posts[i].updatedAt + "</td></tr>");
+     //  tr.append("</tr>");
+     tbody.append(tr);
+    //  tbody.append("</tr>");
+     tablediv.prepend(tr);
+         
+    }
+   
+    // location.reload();
+   }
+   
 });
  

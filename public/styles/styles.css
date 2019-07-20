@@ -291,6 +291,10 @@ h2 {
 #categorydiv {
   display: none;
 }
+#commentdiv{
+  display: none;
+}
+
 #adminSide{
   width:11rem;
   height:700px; 
@@ -311,4 +315,19 @@ h2 {
   color: white;
   align-items: center;
   word-spacing: 2px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
