@@ -39,6 +39,54 @@ $(document).ready(function () {
       }).then(function (category) {
         console.log(category);
         displayBooks(category);
+        // function displayBooks(){
+        //   $(".hide-row").show();
+        //   for (var i = 0; i < category.length; i++) {
+        //     console.log(category[i]);
+        
+        //     //display books and images
+        //     var bookDiv = $("<div>");
+        //     bookDiv.addClass("book-div");
+        //     var bookRow = $("<div>");
+        //     bookRow.addClass("info-row");
+        //     var bookTitle = category[i].title;
+        //     var author = category[i].authors;
+        //     var publishedDate = category[i].publishedDate;
+        //     publishedDate = moment(publishedDate, "YYYY-MM-DD").format("MMMM Do YYYY");
+        //     var bookImage = category[i].thumbnail;
+        //     var rating = category[i].averageRating;
+        //     console.log(bookTitle, author, publishedDate);
+        //     console.log(bookImage);
+
+        //     var preview = category[i].previewlink;
+        //     var linkName = $("<a>");
+        //     linkName.attr("href", preview);
+        //     linkName.addClass("link-name");
+        //     linkName.text(bookTitle);
+        //     linkName.attr("target","_blank");
+        
+        //     var p = $("<p>");
+        //     var titleDiv = $("<div>");
+        //     var infoDiv = $("<div>");
+        //     titleDiv.addClass("book-title");
+        //     linkName.html(bookTitle + "<br>");
+        //     linkName.addClass("book-title");
+        //     infoDiv.addClass("info-text");
+        //     infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>" + "Rating: " + rating + "<br>");
+        //     var imageDiv = $("<img>");
+        //     imageDiv.attr("src", bookImage);
+        //     imageDiv.addClass("images col-6");
+        //     bookRow.append(imageDiv);
+        
+        //     p.append(linkName);
+        //     p.append(infoDiv);
+        //     p.addClass("text col-6");
+        //     bookRow.append(p);
+        //     bookDiv.append(bookRow);
+        //     $("#books-area").append(bookDiv);
+        //   } //closing of main for loop
+        // }
+        // displayBooks();
       });
     }
     else if(category === "Language" && searchby !== "Select"){
@@ -90,6 +138,7 @@ $(document).ready(function () {
   function displayBooks(category){
     $("#books-area").empty();
     $(".hide-row").show();
+    $(".hide-row").show();
     for (var i = 0; i < category.length; i++) {
       console.log(category[i]);
   
@@ -103,28 +152,37 @@ $(document).ready(function () {
       var publishedDate = category[i].publishedDate;
       publishedDate = moment(publishedDate, "YYYY-MM-DD").format("MMMM Do YYYY");
       var bookImage = category[i].thumbnail;
+      var rating = category[i].averageRating;
       console.log(bookTitle, author, publishedDate);
       console.log(bookImage);
+
+      var preview = category[i].previewlink;
+      var linkName = $("<a>");
+      linkName.attr("href", preview);
+      linkName.addClass("link-name");
+      linkName.text(bookTitle);
+      linkName.attr("target","_blank");
   
       var p = $("<p>");
       var titleDiv = $("<div>");
       var infoDiv = $("<div>");
       titleDiv.addClass("book-title");
-      titleDiv.html("Title: " + bookTitle + "<br>");
+      linkName.html(bookTitle + "<br>");
+      linkName.addClass("book-title");
       infoDiv.addClass("info-text");
-      infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>");
+      infoDiv.html("Author: " + author + "<br>" + "Date Published: " + publishedDate + "<br>" + "Rating: " + rating + "<br>");
       var imageDiv = $("<img>");
       imageDiv.attr("src", bookImage);
       imageDiv.addClass("images col-6");
       bookRow.append(imageDiv);
   
-      p.append(titleDiv);
+      p.append(linkName);
       p.append(infoDiv);
       p.addClass("text col-6");
       bookRow.append(p);
       bookDiv.append(bookRow);
       $("#books-area").append(bookDiv);
-    } //closing of main for loop
+    }
   }
 });
 
