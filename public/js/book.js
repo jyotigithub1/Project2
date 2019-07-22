@@ -1,3 +1,4 @@
+
 $(".hide-row").hide();
 
 $(document).ready(function () {

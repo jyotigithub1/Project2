@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   console.log("inside admin.js");
   console.log("inside the click");
@@ -163,4 +164,3 @@ $(document).ready(function() {
   }
    
 });
- 
