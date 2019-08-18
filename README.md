@@ -16,7 +16,7 @@ favorite IT books.
   
   ## The link is below:
 
-* Check out https://whispering-ocean-74883.herokuapp.com/)
+* Check out https://whispering-ocean-74883.herokuapp.com/
 
 
 ## Description
